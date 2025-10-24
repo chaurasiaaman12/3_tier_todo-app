@@ -1,0 +1,12 @@
+# Step 1: Use official nginx image
+FROM nginx:alpine
+
+# Step 2: Remove default nginx page & copy custom app
+RUN rm -rf /usr/share/nginx/html/*
+COPY . /usr/share/nginx/html
+
+# Step 3: Expose port 80
+EXPOSE 80
+
+# Step 4: Start nginx
+CMD ["nginx", "-g", "daemon off;"]
