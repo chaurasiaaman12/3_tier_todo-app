@@ -7,5 +7,5 @@ scrape_configs:
       - targets: ['backend:3000']
   - job_name: 'jenkins'
     static_configs:
-      - targets: ['jenkins:8080']
+      - targets: ['jenkins:8081']
 
